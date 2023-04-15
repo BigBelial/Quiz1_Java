@@ -11,13 +11,13 @@ public class Menu
     //variables
 
     String productos [][] = new String [20][3]; 
-    String ventas [][] = new String [20][9];
+   // String ventas [][] = new String [20][9];
     String factura[][] = new String [20][9];
 
     int filaProductosCreados = 0;
     int codigoProductosCreados = 1;
     int filaVentas = 0;
-    int filaFactura = 0;
+    int filaFactura = 1;
     int cantidadComprar = 0;
     
 
@@ -94,7 +94,8 @@ public class Menu
     }
 
     public void Vender(){
-        new Vender(cantidadComprar, filaProductosCreados, codigoProductosCreados, filaVentas, filaFactura, productos, ventas, factura);
+        new Vender(cantidadComprar, filaProductosCreados, codigoProductosCreados, filaVentas, filaFactura, productos, factura);
+        filaFactura++;
     }
 
 
@@ -102,6 +103,7 @@ public class Menu
         System.out.print("\033[H\033[2J");  
         System.out.flush(); 
     }
+
 
     public static void main( String[] args )
     {
